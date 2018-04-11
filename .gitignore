@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 /Funzioni_PyTumblr.pyc
 =======
 >>>>>>> Porco dio mancava la commit iniziale
+=======
+/Funzioni_PyTumblr.pyc
+=======
+>>>>>>> b02b1e022a9ea2f25d2727b23dfd30df6e513707
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -106,6 +111,10 @@ ENV/
 # mypy
 .mypy_cache/
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8c8d43d4100e3f4d028a906d16504fdac9b2e2b3
 >>>>>>> Porco dio mancava la commit iniziale
+=======
+>>>>>>> 8c8d43d4100e3f4d028a906d16504fdac9b2e2b3
+>>>>>>> b02b1e022a9ea2f25d2727b23dfd30df6e513707
