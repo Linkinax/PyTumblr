@@ -11,12 +11,14 @@ from PIL import ImageDraw
 from Funzioni_PyTumblr import get_titoli_from_reddit
 from InstagramAPI import InstagramAPI
 
-def PostaInstagram():
-    oInstagramAPI = InstagramAPI("unsaid.citations", "verdesmeraldo")
+def PostaInstagram(Titolo):
+    user = "unsaid.citations"
+    passw= raw_input("Passowrd: ")
+    oInstagramAPI = InstagramAPI(user, passw)
     oInstagramAPI.login()  # login
 
     photo_path = '/home/alex/Documenti/LOL/C0D3rPAzZ0/Baws/Al/PyTumblr_project/TestingPesante/0.jpg'
-    caption = ":)"
+    caption = Titolo
     oInstagramAPI.uploadPhoto(photo_path, caption=caption)
 def stampa(stringa):
     k =1
