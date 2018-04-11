@@ -62,17 +62,8 @@ if __name__ == '__main__':
                      "epNkKeTfXS0OcQoZO9naLSXdj58EqksbBH3N7BNCaSDJ0WPRH8",
                      "incredibleearth",
                      "EarthPorn",
-                     ['Earth', 'cool place', 'photo', 'place', 'wow', 'amazing', 'pics', 'nature', 'wild'],
-
-                       )
-    meme2_r = RedditBlog("gn1tWsZ5Wq3tyOdZbKoOLHrUhlYwAnXqDjEeLRtwjGuCu1LKh2",
-                     "vcIKu8qrHl8uguTgjkbGuwaQiVDajMfY3zi1u7AJXcUzlDVxiU",
-                     "dC00e6YQxlwWT37Lm8A8ZIx1VpwHoVcTbCAHlinpptluI6R8YT",
-                     "6gMoqbosWaQCfK1c56CPvCNmMyyFtZkZjKrDuUDNig4Bd10Vsw",
-                     "gn1tWsZ5Wq3tyOdZbKoOLHrUhlYwAnXqDjEeLRtwjGuCu1LKh2",
-                     "memesforages",
-                     "funny",
-                     ['meme', 'memes', 'funny', 'dank meme', 'funny picture'])
+                     ['Earth', 'cool place', 'photo', 'place', 'wow', 'amazing', 'pics', 'nature', 'wild'],)
+    
     programmingHumour_r = RedditBlog("UqBfts94LerDmvzD3kzVLO8bEFLk3cnMUyWJVixgtSQ6lJnJgs",
                                      "j5awYsaeIJLFRsp5Xa8HLw3NTRkIu0hOkabnxRMXrJRU2Nl7v9",
                                      "0E0OgPbLtfzCN3yXPD8ZKho6tU0GFfq16zM9twCsYCVhK2iOzC",
@@ -90,6 +81,20 @@ if __name__ == '__main__':
                      "aww",
                      ['aww', 'cute', 'adorable', 'aww cute', 'lovely'])
     
+    
+    
+    
+    memes_pages= ["funny", "memes", 'deepfriedmemes', 'dankmemes']
+    for query in memes_pages:
+        f_memes_r = RedditBlog("gn1tWsZ5Wq3tyOdZbKoOLHrUhlYwAnXqDjEeLRtwjGuCu1LKh2",
+                "vcIKu8qrHl8uguTgjkbGuwaQiVDajMfY3zi1u7AJXcUzlDVxiU",
+                "dC00e6YQxlwWT37Lm8A8ZIx1VpwHoVcTbCAHlinpptluI6R8YT",
+                "6gMoqbosWaQCfK1c56CPvCNmMyyFtZkZjKrDuUDNig4Bd10Vsw",
+                "gn1tWsZ5Wq3tyOdZbKoOLHrUhlYwAnXqDjEeLRtwjGuCu1LKh2",
+                "memesforages",
+                query,
+                ['meme', 'memes', 'funny', 'dank meme', 'funny picture'])
+        blogs_reddit.append(f_memes_r)
     
     #blogs_reddit.append(o_blog_reddit)
     blogs_reddit.append(programmingHumour_r)
