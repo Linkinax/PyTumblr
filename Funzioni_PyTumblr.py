@@ -67,7 +67,7 @@ def get_urls_from_reddit(querry):
     lista_finale = []
 
     browser = webdriver.Firefox(
-        executable_path='/home/alex/C0D3rPAzZ0/Baws/Al/PyTumblr_project/Poster/geckodriver')
+        executable_path='/home/alex/Documents/Coder/geckodriver')
 
     browser.get('https://www.reddit.com/r/' + querry)
 
@@ -107,7 +107,7 @@ def get_nsfw_urls_from_reddit(querry):
 
     # Il broser ha smesso di funzionare come dovrebbe
     browser = webdriver.Firefox(
-        executable_path='/home/link/Desktop/Al/PyTumblr_project/geckodriver')
+        executable_path='/home/alex/Documents/Coder/geckodriver')
     browser.refresh()
     browser.get('https://www.reddit.com/r/' + querry + '/new')
 
@@ -224,7 +224,7 @@ def get_titoli_from_reddit(query):
 
     # Il broser ha smesso di funzionare come dovrebbe
     browser = webdriver.Firefox(
-        executable_path='/home/alex/Documenti/LOL/C0D3rPAzZ0/Baws/Al/PyTumblr_project/geckodriver')
+        executable_path='/home/alex/Documents/Coder/geckodriver')
     browser.refresh()
     browser.get('https://www.reddit.com/r/' + query)
 
