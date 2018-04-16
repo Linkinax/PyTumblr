@@ -31,22 +31,25 @@ def stampa(stringa):
             
     parole = stringa.split(" ")
     frase = ""
-    
-    while(((num<len(parole)%9)!=0)):
+    botta =0 
+    while(num<len(parole)):
         frase += parole[num]+" "
         num +=1
-        if num%10==0:
+        if num%8==0: #numero di parole stampate per riga
+            
+            #img = Image.open("0.jpg")
+            draw = ImageDraw.Draw(img)
             print(frase+"\n")
-            draw.text((30, 305+(130*num)), frase,(255,255,255), font) 
+            draw.text((30, 105+(130*botta)), frase,(255,255,255), font) 
+            botta +=1
+            img.save(str(0)+'.jpg')
             frase = "" 
-    img.save(str(num)+'.jpg')
 if __name__ == '__main__':
     
     cits = get_titoli_from_reddit('quotes')
     print ("Elementi: "+ str(cits.__len__()))
-    for k in cits:
-        print(k+"\t DIO porco: "+str(len(k)) +"\n")
-        stampa(k)
+    stampa(cits[0])
+    PostaInstagram(cits[0] +" #quote")
     
         
         
