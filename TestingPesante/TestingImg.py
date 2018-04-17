@@ -13,7 +13,7 @@ from InstagramAPI import InstagramAPI
 import stampa_dio
 
 
-def PostaInstagram(Titolo):
+def PostaInstagram(Titolo, password):
     user = "unsaid.citations"
     passw= raw_input("Passowrd: ")
     oInstagramAPI = InstagramAPI(user, passw)
@@ -27,29 +27,44 @@ def stampa(stringa):
     
     img = Image.open("sfondo_quotes4.jpg")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("TravelingTypewriter.otf" , 150)
+    font = ImageFont.truetype("TravelingTypewriter.otf" , 115)
             
     parole = stringa.split(" ")
     frase = ""
+    conta_parole=0
     botta =0 
-    while(num<len(parole)):
-        frase += parole[num]+" "
-        num +=1
-        if num%8==0: #numero di parole stampate per riga
-            
+    
+    for parola in parole:
+        frase += parola+ " "
+        conta_parole+=1 
+        if(len(frase)>=24):
+            conta_parole -= 1
+            frase.replace(parola+" ", "")
             #img = Image.open("0.jpg")
             draw = ImageDraw.Draw(img)
             print(frase+"\n")
-            draw.text((30, 105+(130*botta)), frase,(255,255,255), font) 
+            draw.text((30, 105+(100*botta)), frase,(255,255,255), font) 
             botta +=1
             img.save(str(0)+'.jpg')
             frase = "" 
+    img = Image.open("0.jpg")
+    draw = ImageDraw.Draw(img)
+    print(frase+"\n")
+    draw.text((30, 105+(100*botta)), frase,(255,255,255), font) 
+    botta +=1
+    img.save(str(0)+'.jpg')
+        
+   
 if __name__ == '__main__':
-    
+    password = raw_input("Digita la password: ")
     cits = get_titoli_from_reddit('quotes')
+    print("CIT: "+ cits[2]+ "\n")
     print ("Elementi: "+ str(cits.__len__()))
-    stampa(cits[0])
-    PostaInstagram(cits[1] +" #quote")
+    for cit in cits:
+        stampa(cit)
+        autore = cit.split("-")
+        PostaInstagram(cit+ " #quote #cit"+ "#"+autore[1], password)
+    #PostaInstagram(cits[1] +" #quote")
     
         
         
