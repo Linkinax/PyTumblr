@@ -27,7 +27,7 @@ def stampa(stringa):
     
     img = Image.open("sfondo_quotes4.jpg")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("GreatVibes-Regular.otf" , 150)
+    font = ImageFont.truetype("TravelingTypewriter.otf" , 150)
             
     parole = stringa.split(" ")
     frase = ""
@@ -49,7 +49,7 @@ if __name__ == '__main__':
     cits = get_titoli_from_reddit('quotes')
     print ("Elementi: "+ str(cits.__len__()))
     stampa(cits[0])
-    PostaInstagram(cits[0] +" #quote")
+    PostaInstagram(cits[1] +" #quote")
     
         
         
