@@ -60,13 +60,9 @@ if __name__ == '__main__':
     cits = get_titoli_from_reddit('quotes')
     print("CIT: "+ cits[2]+ "\n")
     print ("Elementi: "+ str(cits.__len__()))
-    for cit in cits:
-        stampa(cit)
-        autore = cit.split("-")
-        PostaInstagram(cit+ " #quote #cit"+ "#"+autore[1], password)
     #PostaInstagram(cits[1] +" #quote")
-    
-        
-        
-        
-        
+    for i in range(len(cits)):
+            pezzi = cits[i].split('-')
+            if len(pezzi)>1:
+                if len(pezzi[1])<15:
+                    PostaInstagram(pezzi[0]+ " #quote #cit"+"#"+pezzi[1], password)    
