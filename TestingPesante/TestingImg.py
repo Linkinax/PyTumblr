@@ -11,12 +11,11 @@ from PIL import ImageDraw
 from Funzioni_PyTumblr import get_titoli_from_reddit
 from InstagramAPI import InstagramAPI
 import stampa_dio
-
+from time import sleep
 
 def PostaInstagram(Titolo, password):
     user = "unsaid.citations"
-    passw= raw_input("Passowrd: ")
-    oInstagramAPI = InstagramAPI(user, passw)
+    oInstagramAPI = InstagramAPI(user, password)
     oInstagramAPI.login()  # login
 
     photo_path = '/home/alex/Documents/Coder/TestingPesante/0.jpg'
@@ -42,14 +41,14 @@ def stampa(stringa):
             frase.replace(parola+" ", "")
             #img = Image.open("0.jpg")
             draw = ImageDraw.Draw(img)
-            print(frase+"\n")
+            #print(frase+"\n")
             draw.text((30, 105+(100*botta)), frase,(255,255,255), font) 
             botta +=1
             img.save(str(0)+'.jpg')
             frase = "" 
     img = Image.open("0.jpg")
     draw = ImageDraw.Draw(img)
-    print(frase+"\n")
+    #print(frase+"\n")
     draw.text((30, 105+(100*botta)), frase,(255,255,255), font) 
     botta +=1
     img.save(str(0)+'.jpg')
@@ -58,11 +57,14 @@ def stampa(stringa):
 if __name__ == '__main__':
     password = raw_input("Digita la password: ")
     cits = get_titoli_from_reddit('quotes')
-    print("CIT: "+ cits[2]+ "\n")
     print ("Elementi: "+ str(cits.__len__()))
     #PostaInstagram(cits[1] +" #quote")
     for i in range(len(cits)):
+            print("CIT: "+ cits[i]+ "\n")
             pezzi = cits[i].split('-')
             if len(pezzi)>1:
                 if len(pezzi[1])<15:
-                    PostaInstagram(pezzi[0]+ " #quote #cit"+"#"+pezzi[1], password)    
+                    print("Posto: "+pezzi[0])
+                    stampa(cits[i])
+                    PostaInstagram(pezzi[0]+ " #quote #cit "+"#"+str(pezzi[1][1:]).replace(" ", ''), password) 
+                    sleep(150)   

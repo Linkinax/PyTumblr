@@ -69,7 +69,7 @@ def get_urls_from_reddit(querry):
     browser = webdriver.Firefox(
         executable_path='/home/alex/Documents/Coder/geckodriver')
 
-    browser.get('https://www.reddit.com/r/' + querry)
+    browser.get('https://www.reddit.com/r/' + querry+ "/top/")
 
     #buttons = browser.find_element_by_css_selector("button.c-btn:nth-child(2)")
     # buttons.click()
@@ -226,7 +226,7 @@ def get_titoli_from_reddit(query):
     browser = webdriver.Firefox(
         executable_path='/home/alex/Documents/Coder/geckodriver')
     browser.refresh()
-    browser.get('https://www.reddit.com/r/' + query)
+    browser.get('https://www.reddit.com/r/' + query+"/top/?sort=top&t=week")
 
     """
     buttons = browser.find_element_by_css_selector("button.c-btn:nth-child(2)")
