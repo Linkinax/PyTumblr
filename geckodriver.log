@@ -4439,3 +4439,299 @@ ATTENTION: default value of option force_s3tc_enable overridden by environment.
 1523934580549	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/dankmemes/"
 1523934581847	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483660"
 1523934598943	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/dankmemes/"
+1524166829505	geckodriver	INFO	geckodriver 0.19.1
+1524166829604	geckodriver	INFO	Listening on 127.0.0.1:43081
+1524166830587	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.4zOsphDgw9Db"
+1524166831286	Marionette	INFO	Enabled via --marionette
+1524166834035	Marionette	INFO	Listening on port 39831
+1524166834257	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524166834301	Marionette	DEBUG	Register listener.js for window 2147483649
+1524166834321	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524166835497	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524166835498	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524166838461	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/Autos/"
+1524166842544	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483655"
+JavaScript error: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9699191536922730&output=html&h=250&slotname=9642010866%2F4648130226&adk=1567751422&adf=3530038678&w=300&loeid=332260004&url=https%3A%2F%2Fwww.reddit.com%2Fr%2FAutos%2F&ea=0&flash=0&wgl=1&adsid=NT&dt=1524166846373&bpp=36&bdt=364&fdt=45&idt=418&shv=r20180411&cbv=r20170110&saldr=sa&correlator=5646196555635&frm=24&ga_vid=848856545.1524166847&ga_sid=1524166847&ga_hid=980980334&ga_fc=0&pv=2&icsg=2&nhd=3&dssz=3&mdo=0&mso=0&u_tz=120&u_his=1&u_java=0&u_h=1080&u_w=1920&u_ah=1054&u_aw=1920&u_cd=24&u_nplug=0&u_nmime=0&adx=0&ady=0&biw=-12245933&bih=-12245933&isw=300&ish=250&ifk=3998542530&scr_x=-12245933&scr_y=-12245933&eid=21061122%2C332260000%2C33895412%2C20040065%2C188690902&oid=3&rx=0&eae=2&brdim=%2C%2C310%2C44%2C1920%2C26%2C1280%2C948%2C300%2C250&vis=1&rsz=%7C%7CceE%7C&abl=NS&ppjl=f&pfx=0&fu=8212&bc=5&ifi=1&dtd=446, line 1: TypeError: elms.getElementsByTagName is not a function
+JavaScript error: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9699191536922730&output=html&h=250&slotname=9642010866%2F4648130226&adk=1567751422&adf=3530038678&w=300&loeid=332260004&url=https%3A%2F%2Fwww.reddit.com%2Fr%2FAutos%2F&ea=0&flash=0&wgl=1&adsid=NT&dt=1524166846373&bpp=36&bdt=364&fdt=45&idt=418&shv=r20180411&cbv=r20170110&saldr=sa&correlator=5646196555635&frm=24&ga_vid=848856545.1524166847&ga_sid=1524166847&ga_hid=980980334&ga_fc=0&pv=2&icsg=2&nhd=3&dssz=3&mdo=0&mso=0&u_tz=120&u_his=1&u_java=0&u_h=1080&u_w=1920&u_ah=1054&u_aw=1920&u_cd=24&u_nplug=0&u_nmime=0&adx=0&ady=0&biw=-12245933&bih=-12245933&isw=300&ish=250&ifk=3998542530&scr_x=-12245933&scr_y=-12245933&eid=21061122%2C332260000%2C33895412%2C20040065%2C188690902&oid=3&rx=0&eae=2&brdim=%2C%2C310%2C44%2C1920%2C26%2C1280%2C948%2C300%2C250&vis=1&rsz=%7C%7CceE%7C&abl=NS&ppjl=f&pfx=0&fu=8212&bc=5&ifi=1&dtd=446, line 1: TypeError: elms.getElementsByTagName is not a function
+1524166866335	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/Autos/"
+[Child 18517, Chrome_ChildThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x100027,name=PBackground::Msg_PHttpBackgroundChannelConstructor) Channel error: cannot send/recv
+
+1524166867059	geckodriver	INFO	geckodriver 0.19.1
+1524166867061	geckodriver	INFO	Listening on 127.0.0.1:42111
+1524166868143	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.KHxP2fJtQC5b"
+1524166868784	Marionette	INFO	Enabled via --marionette
+1524166871809	Marionette	INFO	Listening on port 41947
+1524166871950	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524166872008	Marionette	DEBUG	Register listener.js for window 2147483649
+1524166872034	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524166873683	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524166873683	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524166875112	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/EarthPorn/"
+1524166881094	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483658"
+1524166894263	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483759"
+1524166898543	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/EarthPorn/"
+[Child 18868, Chrome_ChildThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 18868, Chrome_ChildThread] WARNING: pipe error (34): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 18868, Chrome_ChildThread] WARNING: pipe error (19): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 18868, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1524166899243	geckodriver	INFO	geckodriver 0.19.1
+1524166899246	geckodriver	INFO	Listening on 127.0.0.1:53489
+1524166900333	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.A1aVWbvhJmmE"
+1524166900979	Marionette	INFO	Enabled via --marionette
+1524166904033	Marionette	INFO	Listening on port 42129
+1524166904049	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524166904117	Marionette	DEBUG	Register listener.js for window 2147483649
+1524166904279	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524166905850	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524166905850	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1524166913796	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/ProgrammerHumor/"
+1524166925226	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/ProgrammerHumor/"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524167062457	geckodriver	INFO	geckodriver 0.19.1
+1524167062460	geckodriver	INFO	Listening on 127.0.0.1:55791
+1524167063545	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.zCTFiaChUOmm"
+1524167064375	Marionette	INFO	Enabled via --marionette
+1524167067249	Marionette	INFO	Listening on port 34577
+1524167067257	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524167067304	Marionette	DEBUG	Register listener.js for window 2147483649
+1524167067453	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524167068823	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524167068824	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524167071347	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/Autos/"
+1524167074540	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483655"
+JavaScript error: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9699191536922730&output=html&h=250&slotname=9642010866%2F4648130226&adk=1567751422&adf=3530038678&w=300&loeid=332260004&url=https%3A%2F%2Fwww.reddit.com%2Fr%2FAutos%2F&ea=0&flash=0&wgl=1&adsid=NT&dt=1524167086581&bpp=13&bdt=52&fdt=21&idt=410&shv=r20180411&cbv=r20170110&saldr=sa&correlator=8603865591352&frm=24&ga_vid=1495201132.1524167087&ga_sid=1524167087&ga_hid=504489344&ga_fc=0&pv=2&icsg=2&nhd=3&dssz=3&mdo=0&mso=0&u_tz=120&u_his=1&u_java=0&u_h=1080&u_w=1920&u_ah=1054&u_aw=1920&u_cd=24&u_nplug=0&u_nmime=0&adx=0&ady=0&biw=-12245933&bih=-12245933&isw=300&ish=250&ifk=1488296772&scr_x=-12245933&scr_y=-12245933&eid=21060548%2C21061122%2C332260000%2C33895413%2C20040065%2C389613005%2C25070061&oid=3&rx=0&eae=2&brdim=%2C%2C310%2C44%2C1920%2C26%2C1280%2C948%2C300%2C250&vis=1&rsz=%7C%7CceE%7C&abl=NS&ppjl=f&pfx=0&fu=8212&bc=5&ifi=1&dtd=440, line 1: TypeError: elms.getElementsByTagName is not a function
+JavaScript error: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9699191536922730&output=html&h=250&slotname=9642010866%2F4648130226&adk=1567751422&adf=3530038678&w=300&loeid=332260004&url=https%3A%2F%2Fwww.reddit.com%2Fr%2FAutos%2F&ea=0&flash=0&wgl=1&adsid=NT&dt=1524167086581&bpp=13&bdt=52&fdt=21&idt=410&shv=r20180411&cbv=r20170110&saldr=sa&correlator=8603865591352&frm=24&ga_vid=1495201132.1524167087&ga_sid=1524167087&ga_hid=504489344&ga_fc=0&pv=2&icsg=2&nhd=3&dssz=3&mdo=0&mso=0&u_tz=120&u_his=1&u_java=0&u_h=1080&u_w=1920&u_ah=1054&u_aw=1920&u_cd=24&u_nplug=0&u_nmime=0&adx=0&ady=0&biw=-12245933&bih=-12245933&isw=300&ish=250&ifk=1488296772&scr_x=-12245933&scr_y=-12245933&eid=21060548%2C21061122%2C332260000%2C33895413%2C20040065%2C389613005%2C25070061&oid=3&rx=0&eae=2&brdim=%2C%2C310%2C44%2C1920%2C26%2C1280%2C948%2C300%2C250&vis=1&rsz=%7C%7CceE%7C&abl=NS&ppjl=f&pfx=0&fu=8212&bc=5&ifi=1&dtd=440, line 1: TypeError: elms.getElementsByTagName is not a function
+1524167099578	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/Autos/"
+[Child 19517, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1524167100375	geckodriver	INFO	geckodriver 0.19.1
+1524167100378	geckodriver	INFO	Listening on 127.0.0.1:33869
+1524167101464	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.QSK3rSKn8L08"
+1524167102397	Marionette	INFO	Enabled via --marionette
+1524167105295	Marionette	INFO	Listening on port 40991
+1524167105448	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524167105494	Marionette	DEBUG	Register listener.js for window 2147483649
+1524167105514	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524167111410	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524167111410	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524167112146	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/EarthPorn/"
+1524167118750	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/EarthPorn/"
+[Child 19682, Chrome_ChildThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 19682, Chrome_ChildThread] WARNING: pipe error (15): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 19682, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1524167119593	geckodriver	INFO	geckodriver 0.19.1
+1524167119596	geckodriver	INFO	Listening on 127.0.0.1:40117
+1524167120681	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.TbqUnt0KJFGo"
+1524167121279	Marionette	INFO	Enabled via --marionette
+1524167124110	Marionette	INFO	Listening on port 42235
+1524167124259	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524167124305	Marionette	DEBUG	Register listener.js for window 2147483649
+1524167124320	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524167130214	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524167130215	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524167132038	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/ProgrammerHumor/"
+1524167132365	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483660"
+1524167138180	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/ProgrammerHumor/"
+[Child 19835, Chrome_ChildThread] WARNING: pipe error (34): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 19835, Chrome_ChildThread] WARNING: pipe error (15): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 19835, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1524167139019	geckodriver	INFO	geckodriver 0.19.1
+1524167139021	geckodriver	INFO	Listening on 127.0.0.1:53067
+1524167140112	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.ziW5izz2YwFI"
+1524167140753	Marionette	INFO	Enabled via --marionette
+1524167143658	Marionette	INFO	Listening on port 32873
+1524167143858	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524167143918	Marionette	DEBUG	Register listener.js for window 2147483649
+1524167143946	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524167145180	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524167145181	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524167147819	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/aww/"
+1524167160439	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/aww/"
+[Child 19985, Chrome_ChildThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 19985, Chrome_ChildThread] WARNING: pipe error (34): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 19985, Chrome_ChildThread] WARNING: pipe error (15): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 19985, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1524167161258	geckodriver	INFO	geckodriver 0.19.1
+1524167161260	geckodriver	INFO	Listening on 127.0.0.1:54959
+1524167162348	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.sHGzwDjPfHFj"
+1524167162962	Marionette	INFO	Enabled via --marionette
+1524167165626	Marionette	INFO	Listening on port 36651
+1524167165767	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524167165824	Marionette	DEBUG	Register listener.js for window 2147483649
+1524167165846	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524167167079	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524167167079	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524167168449	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/funny/"
+1524167170818	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483655"
+1524167176950	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483747"
+1524167183718	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/funny/"
+[Child 20138, Chrome_ChildThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 20138, Chrome_ChildThread] WARNING: pipe error (15): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 20138, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1524167184549	geckodriver	INFO	geckodriver 0.19.1
+1524167184552	geckodriver	INFO	Listening on 127.0.0.1:49607
+1524167185639	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.0lhqARpNXMi2"
+1524167186240	Marionette	INFO	Enabled via --marionette
+1524167189061	Marionette	INFO	Listening on port 40575
+1524167189240	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524167189287	Marionette	DEBUG	Register listener.js for window 2147483649
+1524167189299	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524167195530	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524167195531	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524167197721	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/memes/"
+1524167215237	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483658"
+1524167238606	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/memes/"
+1524167239364	geckodriver	INFO	geckodriver 0.19.1
+1524167239366	geckodriver	INFO	Listening on 127.0.0.1:46713
+1524167240455	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.YirzFylnDkXg"
+1524167241034	Marionette	INFO	Enabled via --marionette
+1524167243820	Marionette	INFO	Listening on port 42927
+1524167243971	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524167244014	Marionette	DEBUG	Register listener.js for window 2147483649
+1524167244028	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524167245195	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524167245196	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524167247113	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/DeepFriedMemes/"
+1524167254560	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/DeepFriedMemes/"
+[Child 20473, Chrome_ChildThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 20473, Chrome_ChildThread] WARNING: pipe error (34): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 20473, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 20473, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1524167255413	geckodriver	INFO	geckodriver 0.19.1
+1524167255415	geckodriver	INFO	Listening on 127.0.0.1:39639
+1524167256502	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.ROZ2sdeJqsw6"
+1524167257063	Marionette	INFO	Enabled via --marionette
+1524167259824	Marionette	INFO	Listening on port 38141
+1524167259962	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524167260011	Marionette	DEBUG	Register listener.js for window 2147483649
+1524167260026	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524167261303	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524167261303	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524167264996	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/dankmemes/"
+1524167281124	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/dankmemes/"
+[Child 20621, Chrome_ChildThread] WARNING: pipe error (34): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 20621, Chrome_ChildThread] WARNING: pipe error (15): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 20621, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1524168582458	Marionette	DEBUG	Register listener.js for window 4294967297
+1524168582494	Marionette	DEBUG	Register listener.js for window 4294967299
+1524168583698	Marionette	DEBUG	Register listener.js for window 4294967303
+1524177213798	geckodriver	INFO	geckodriver 0.19.1
+1524177213821	geckodriver	INFO	Listening on 127.0.0.1:57591
+1524177215152	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.PNIemnMcd8q7"
+1524177230245	Marionette	INFO	Enabled via --marionette
+1524177243598	Marionette	INFO	Listening on port 39185
+1524177243860	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524177243910	Marionette	DEBUG	Register listener.js for window 2147483649
+1524177245226	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524177246366	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524177246367	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524177255779	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/memes/"
+1524177308146	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/memes/"
+1524177440346	geckodriver	INFO	geckodriver 0.19.1
+1524177440352	geckodriver	INFO	Listening on 127.0.0.1:59165
+1524177440579	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.00jNd6F2Ljyg"
+1524177441859	Marionette	INFO	Enabled via --marionette
+1524177444910	Marionette	INFO	Listening on port 44673
+1524177445066	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524177445110	Marionette	DEBUG	Register listener.js for window 2147483649
+1524177445434	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524177456720	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524177456720	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524177457745	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/memes/"
+1524177469767	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/memes/"
+[Child 29452, Chrome_ChildThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 29452, Chrome_ChildThread] WARNING: pipe error (34): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 29452, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 29452, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1524177601906	geckodriver	INFO	geckodriver 0.19.1
+1524177601908	geckodriver	INFO	Listening on 127.0.0.1:40513
+1524177602994	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.7PiIYRSRDClY"
+1524177603650	Marionette	INFO	Enabled via --marionette
+1524177606544	Marionette	INFO	Listening on port 40895
+1524177606673	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524177606720	Marionette	DEBUG	Register listener.js for window 2147483649
+1524177606738	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524177607905	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524177607906	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524177609958	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/memes/"
+1524177646954	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/memes/"
+1524178274920	geckodriver	INFO	geckodriver 0.19.1
+1524178274940	geckodriver	INFO	Listening on 127.0.0.1:52247
+1524178276097	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.KkuJmr7575KI"
+1524178285855	Marionette	INFO	Enabled via --marionette
+1524178294671	Marionette	INFO	Listening on port 35283
+1524178294959	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524178295006	Marionette	DEBUG	Register listener.js for window 2147483649
+1524178295721	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524178296779	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524178296779	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1524178302524	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/memes/"
+1524178308943	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/memes/"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+JavaScript error: resource:///modules/FormSubmitObserver.jsm, line 223: TypeError: this._mm is null
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1524178326528	geckodriver	INFO	geckodriver 0.19.1
+1524178326531	geckodriver	INFO	Listening on 127.0.0.1:32785
+1524178327642	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.sfaPdm8rGHAF"
+1524178328304	Marionette	INFO	Enabled via --marionette
+1524178333563	Marionette	INFO	Listening on port 44115
+1524178333720	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524178333765	Marionette	DEBUG	Register listener.js for window 2147483649
+1524178333776	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524178335476	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524178335477	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524178338226	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/memes/"
+1524178422093	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/memes/"
+[Child 30802, Chrome_ChildThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 30802, Chrome_ChildThread] WARNING: pipe error (34): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 30802, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 30802, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1524178449385	geckodriver	INFO	geckodriver 0.19.1
+1524178449387	geckodriver	INFO	Listening on 127.0.0.1:53463
+1524178450470	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.GNtHpEupOGwR"
+1524178451163	Marionette	INFO	Enabled via --marionette
+1524178453889	Marionette	INFO	Listening on port 34153
+1524178454063	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524178454126	Marionette	DEBUG	Register listener.js for window 2147483649
+1524178454154	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524178455360	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524178455360	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524178466684	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/memes/"
+1524178477870	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483659"
+1524178493282	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/memes/"
+[Child 31422, Chrome_ChildThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 31422, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 31422, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1524178866966	geckodriver	INFO	geckodriver 0.19.1
+1524178866968	geckodriver	INFO	Listening on 127.0.0.1:60017
+1524178868056	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Y4DAvHWtTuFe"
+1524178868696	Marionette	INFO	Enabled via --marionette
+1524178871693	Marionette	INFO	Listening on port 40539
+1524178871889	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524178871942	Marionette	DEBUG	Register listener.js for window 2147483649
+1524178871956	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524178873045	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524178873045	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524178877802	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/memes/"
+1524178883127	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483660"
+1524178918487	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/memes/"
+[Child 31820, Chrome_ChildThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 31820, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353

@@ -218,6 +218,7 @@ def smart_reblog(query):
             lista_finale.append(info)
     return lista_finale
 
+    
 
 def get_titoli_from_reddit(query):
     lista_titoli = []
@@ -226,7 +227,7 @@ def get_titoli_from_reddit(query):
     browser = webdriver.Firefox(
         executable_path='/home/alex/Documents/Coder/geckodriver')
     browser.refresh()
-    browser.get('https://www.reddit.com/r/' + query+"/top/?sort=top&t=week")
+    browser.get('https://www.reddit.com/r/' + query+"/top/?sort=top&t=year")
 
     """
     buttons = browser.find_element_by_css_selector("button.c-btn:nth-child(2)")

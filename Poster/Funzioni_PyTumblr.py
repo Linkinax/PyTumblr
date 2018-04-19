@@ -235,7 +235,20 @@ def smart_reblog(query):
 
             lista_finale.append(info)
     return lista_finale
+def smart_reblog_adv(pg_web):
+    lista_finale = []
 
+    response = requests.get(pg_web)
+    html = response.content
+    soup = BeautifulSoup(html, "html.parser", from_encoding="utf-8")
+    articles = soup.find_all('article')
+
+    for article in articles:
+        reblog_control = article.find('a', attrs={'class': 'reblog_button'})
+        link = reblog_control['href']
+        lista_finale.append(link)
+        
+    return lista_finale
 
 def get_titoli_from_reddit(query):
     lista_titoli = []
@@ -244,7 +257,7 @@ def get_titoli_from_reddit(query):
     browser = webdriver.Firefox(
         executable_path='/home/alex/Documents/Coder/geckodriver')
     browser.refresh()
-    browser.get('https://www.reddit.com/r/' + query+"/top/")
+    browser.get('https://www.reddit.com/r/' + query+"/top/?sort=top&t=month")
 
     """
     buttons = browser.find_element_by_css_selector("button.c-btn:nth-child(2)")

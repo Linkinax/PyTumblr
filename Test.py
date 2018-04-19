@@ -25,35 +25,15 @@ from Poster.Funzioni_PyTumblr import *
 
 if __name__ == '__main__':
     print (" TEST --->Working in progress<---..")
-    
-    
-    memes_pages= ["funny", "memes", 'deepfriedmemes', 'dankmemes']
-    for query in memes_pages:
-        f_memes_r = RedditBlog("gn1tWsZ5Wq3tyOdZbKoOLHrUhlYwAnXqDjEeLRtwjGuCu1LKh2",
+    f_memes_r = RedditBlog("gn1tWsZ5Wq3tyOdZbKoOLHrUhlYwAnXqDjEeLRtwjGuCu1LKh2",
                 "vcIKu8qrHl8uguTgjkbGuwaQiVDajMfY3zi1u7AJXcUzlDVxiU",
                 "dC00e6YQxlwWT37Lm8A8ZIx1VpwHoVcTbCAHlinpptluI6R8YT",
                 "6gMoqbosWaQCfK1c56CPvCNmMyyFtZkZjKrDuUDNig4Bd10Vsw",
                 "gn1tWsZ5Wq3tyOdZbKoOLHrUhlYwAnXqDjEeLRtwjGuCu1LKh2",
                 "memesforages",
-                query,
+                "memes",
                 ['meme', 'memes', 'funny', 'dank meme', 'funny picture'])
-        f_memes_r.posta()
-    
-    
-    
-    
-    cars_blog = Poster("s5ThrrONDBVMSqeeRXZZKfnc0YcoSeccbmE1o3asg5HlV1zZPe",
-                     "hO27aURuoEPPAcmWTpIK8C6msBEm7t4ImsI7DfqnANhR85FH0f",
-                     "69tajnyEkLjNN18azr8f1qvCrMEG51lRDMZpLBmorcqPAI0Tfl",
-                     "ZaPn5wnJhJdltSw6jPqtAHXlFQBzmXg0Jekr8W63Q9be3KP6Jw",
-                     "s5ThrrONDBVMSqeeRXZZKfnc0YcoSeccbmE1o3asg5HlV1zZPe",
-                     "carsparadise",
-                     "luxury cars",
-                     ['cars', 'cool cars', 'luxury cars', 'auto', 'wow cars']
-                       )
-    cars_blog.posta()
-    
-    
+    f_memes_r.reblog_adv()
     
     """
     aww_r = RedditBlog("fIJI5esiBwbsttsdd6QhPSB4GvNXMlwzkSAq43efSH8ri9cpQ9",

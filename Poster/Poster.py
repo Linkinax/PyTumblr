@@ -7,6 +7,7 @@ import Funzioni_PyTumblr
 import pytumblr
 from time import sleep
 from _Poster import _poster as ps
+from Funzioni_PyTumblr import *
 
 
 class Poster(ps):
@@ -81,7 +82,15 @@ class Poster(ps):
         for k in lista:
             self.client.reblog(self.name, id=k[0], reblog_key=k[1], tags=k[2])
         print ("Reblogged: %d posts" % (len(lista)))
-
+    def reblog_adv(self):
+        lista_url = "https://thenaturalscenery.tumblr.com/tagged/14871e7"
+        
+        lista_items = smart_reblog_adv(lista_url)
+        id = lista_items[0].split("/")[0]
+        key= lista_items[0].split("/")[1]
+        self.client.reblog(self.name, id=id, key=key, tags=["fashion", "clothes", 'trendy'])
+        
+        
     def posta_quotes(self):
         cits = Funzioni_PyTumblr.get_titoli_from_reddit('quotes')
         tagsss = ['quote', 'cit', 'citation', 'famous words']

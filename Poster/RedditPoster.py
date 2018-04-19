@@ -9,6 +9,7 @@ import pytumblr
 from time import sleep
 from .Funzioni_PyTumblr import get_nsfw_urls_from_reddit
 from .Funzioni_PyTumblr import get_titoli_from_reddit
+from Funzioni_PyTumblr import smart_reblog_adv
 
 
 class RedditBlog():
@@ -61,6 +62,13 @@ class RedditBlog():
             self.client.create_quote(self.name,state="queue",tags=self.tags, caption=cit)
             print ("Fatto")
         print ("Finished")
+    def reblog_adv(self):
+        lista_url = "https://thenaturalscenery.tumblr.com/tagged/14871e7"
+        
+        lista_items = smart_reblog_adv(lista_url)
+        id_p = lista_items[0].split("/")[0]
+        key_p= lista_items[0].split("/")[1]
+        self.client.like( id=id_p, reblog_key=key_p)
 class RedditBlog_nsfw():
     '''
     classdocs

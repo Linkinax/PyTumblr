@@ -45,14 +45,20 @@ def stampa(stringa):
             draw.text((30, 105+(100*botta)), frase,(255,255,255), font) 
             botta +=1
             img.save(str(0)+'.jpg')
-            frase = "" 
+            frase = ""
+                
+    #per srivere l'ultima riga: 
     img = Image.open("0.jpg")
     draw = ImageDraw.Draw(img)
     #print(frase+"\n")
     draw.text((30, 105+(100*botta)), frase,(255,255,255), font) 
     botta +=1
     img.save(str(0)+'.jpg')
-        
+def author(stringa):
+    if(stringa[0] == ' '):
+        return stringa[1:]
+    else:
+        return stringa
    
 if __name__ == '__main__':
     password = raw_input("Digita la password: ")
@@ -63,8 +69,8 @@ if __name__ == '__main__':
             print("CIT: "+ cits[i]+ "\n")
             pezzi = cits[i].split('-')
             if len(pezzi)>1:
-                if len(pezzi[1])<15:
+                if len(pezzi[1])<25:
                     print("Posto: "+pezzi[0])
                     stampa(cits[i])
-                    PostaInstagram(pezzi[0]+ " #quote #cit "+"#"+str(pezzi[1][1:]).replace(" ", ''), password) 
-                    sleep(150)   
+                    PostaInstagram(pezzi[0]+ " #quote #cit "+"#"+str(author(pezzi[1])).replace(" ", ''), password) 
+                    sleep(1200)   
