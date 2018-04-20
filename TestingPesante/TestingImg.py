@@ -65,7 +65,7 @@ if __name__ == '__main__':
     cits = get_titoli_from_reddit('quotes')
     print ("Elementi: "+ str(cits.__len__()))
     #PostaInstagram(cits[1] +" #quote")
-    for i in range(len(cits)):
+    """for i in range(len(cits)):
             print("CIT: "+ cits[i]+ "\n")
             pezzi = cits[i].split('-')
             if len(pezzi)>1:
@@ -73,4 +73,18 @@ if __name__ == '__main__':
                     print("Posto: "+pezzi[0])
                     stampa(cits[i])
                     PostaInstagram(pezzi[0]+ " #quote #cit "+"#"+str(author(pezzi[1])).replace(" ", ''), password) 
-                    sleep(1200)   
+                    sleep(1200)   """
+                    
+                    
+    print("CIT: "+ cits[0]+ "\n")
+    pezzi = cits[0].split('-')
+    if len(pezzi)>1:
+        if len(pezzi[1])<35:
+            print("Posto: "+pezzi[0])
+            stampa(cits[0])
+            PostaInstagram(pezzi[0]+ " #quote #cit "+"#"+str(author(pezzi[1])).replace(" ", ''), password)                 
+                    
+                    
+                    
+                    
+                    

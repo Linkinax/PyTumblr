@@ -3686,3 +3686,48 @@ ATTENTION: default value of option force_s3tc_enable overridden by environment.
 1524166688367	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/quotes/top/?sort=top&t=year"
 [Child 17306, Chrome_ChildThread] WARNING: pipe error (22): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
 [Child 17306, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1524262643582	geckodriver	INFO	geckodriver 0.19.1
+1524262643621	geckodriver	INFO	Listening on 127.0.0.1:36165
+1524262644835	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.6YFmxl1bwBky"
+1524262646228	Marionette	INFO	Enabled via --marionette
+1524262650725	Marionette	INFO	Listening on port 41233
+1524262650809	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524262650881	Marionette	DEBUG	Register listener.js for window 2147483649
+1524262650932	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524262650934	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524262650934	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1524262650937	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:blank"
+1524262650939	Marionette	DEBUG	Received DOM event "pageshow" for "about:blank"
+1524262651048	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524262652071	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524262652071	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524262654240	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/quotes/top/"
+1524262664211	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/quotes/top/"
+[Child 10756, Chrome_ChildThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 10756, Chrome_ChildThread] WARNING: pipe error (34): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 10756, Chrome_ChildThread] WARNING: pipe error (15): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 10756, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1524262983136	geckodriver	INFO	geckodriver 0.19.1
+1524262983139	geckodriver	INFO	Listening on 127.0.0.1:45673
+1524262984227	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.d4iR5tJnpqJ8"
+1524262984846	Marionette	INFO	Enabled via --marionette
+1524262987612	Marionette	INFO	Listening on port 46873
+1524262987768	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524262987817	Marionette	DEBUG	Register listener.js for window 2147483649
+1524262987833	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524262987835	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524262987835	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1524262987838	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:blank"
+1524262987839	Marionette	DEBUG	Received DOM event "pageshow" for "about:blank"
+1524262987860	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524262988756	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524262988756	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+1524262995403	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.reddit.com/r/quotes/top/"
+1524263007624	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.reddit.com/r/quotes/top/"
+[Child 11008, Chrome_ChildThread] WARNING: pipe error (44): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 11008, Chrome_ChildThread] WARNING: pipe error (34): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 11008, Chrome_ChildThread] WARNING: pipe error (19): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 11008, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-3UIrRa/firefox-57.0+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
