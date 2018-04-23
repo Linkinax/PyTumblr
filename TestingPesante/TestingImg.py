@@ -55,6 +55,7 @@ def stampa(stringa):
     botta +=1
     img.save(str(0)+'.jpg')
 def author(stringa):
+    
     if(stringa[0] == ' '):
         return stringa[1:]
     else:
@@ -75,15 +76,15 @@ if __name__ == '__main__':
                     PostaInstagram(pezzi[0]+ " #quote #cit "+"#"+str(author(pezzi[1])).replace(" ", ''), password) 
                     sleep(1200)   """
                     
-                    
-    print("CIT: "+ cits[0]+ "\n")
-    pezzi = cits[0].split('-')
-    if len(pezzi)>1:
-        if len(pezzi[1])<35:
-            print("Posto: "+pezzi[0])
-            stampa(cits[0])
-            PostaInstagram(pezzi[0]+ " #quote #cit "+"#"+str(author(pezzi[1])).replace(" ", ''), password)                 
-                    
+    for cit in cits:                   
+        print("CIT: "+ cit+ "\n")
+        pezzi = cit.split('."')
+        if len(pezzi)>1:
+            if len(pezzi[1])<35:
+                print("Posto: "+pezzi[0])
+                stampa(cit)
+                PostaInstagram(pezzi[1]+ " #quote #famouswords #quotation #citation #words #said #cit "+"#"+str(author(pezzi[1])).replace(" ", ''), password)                 
+                sleep(50)        
                     
                     
                     

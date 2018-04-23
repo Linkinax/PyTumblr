@@ -75,7 +75,7 @@ def get_urls_from_reddit(querry):
     #buttons = browser.find_element_by_css_selector("button.c-btn:nth-child(2)")
     # buttons.click()
 
-    sleep(0.5)
+    sleep(3.5)
 
     siteTable_ = browser.find_elements_by_id(
         "siteTable")[0]  # .get_attribute("innerHTML")
