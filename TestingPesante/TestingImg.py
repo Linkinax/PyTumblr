@@ -57,24 +57,15 @@ def stampa(stringa):
 def author(stringa):
     
     if(stringa[0] == ' '):
-        return stringa[1:]
+        return stringa[1:].replace("-", "" )
     else:
-        return stringa
+        return stringa.replalce("-", '')
    
 if __name__ == '__main__':
     password = raw_input("Digita la password: ")
     cits = get_titoli_from_reddit('quotes')
     print ("Elementi: "+ str(cits.__len__()))
-    #PostaInstagram(cits[1] +" #quote")
-    """for i in range(len(cits)):
-            print("CIT: "+ cits[i]+ "\n")
-            pezzi = cits[i].split('-')
-            if len(pezzi)>1:
-                if len(pezzi[1])<25:
-                    print("Posto: "+pezzi[0])
-                    stampa(cits[i])
-                    PostaInstagram(pezzi[0]+ " #quote #cit "+"#"+str(author(pezzi[1])).replace(" ", ''), password) 
-                    sleep(1200)   """
+    #PostaInstagram(cits[1] +" #quote")"
                     
     for cit in cits:                   
         print("CIT: "+ cit+ "\n")
@@ -83,7 +74,7 @@ if __name__ == '__main__':
             if len(pezzi[1])<35:
                 print("Posto: "+pezzi[0])
                 stampa(cit)
-                PostaInstagram(pezzi[1]+ " #quote #famouswords #quotation #citation #words #said #cit "+"#"+str(author(pezzi[1])).replace(" ", ''), password)                 
+                PostaInstagram(pezzi[1]+ " #quote #amen #quoteoftheday #life #instaquotes #wisdom #true #like4like #follow4follow #sayings #motivational #motivationalquotes #dailyquotes #inspiration #famouswords #quotation #citation #words #said #cit "+"#"+str(author(pezzi[1])).replace(" ", ''), password)                 
                 sleep(50)        
                     
                     
