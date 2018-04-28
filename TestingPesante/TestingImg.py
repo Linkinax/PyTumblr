@@ -55,11 +55,11 @@ def stampa(stringa):
     botta +=1
     img.save(str(0)+'.jpg')
 def author(stringa):
-    
-    if(stringa[0] == ' '):
-        return stringa[1:].replace("-", "" )
-    else:
-        return stringa.replalce("-", '')
+    if(len(stringa)>0):
+        if(stringa[0] == ' '):
+            return stringa[1:].replace("-", "" )
+        else:
+            return stringa.replace("-", '')
    
 if __name__ == '__main__':
     password = raw_input("Digita la password: ")
@@ -72,7 +72,7 @@ if __name__ == '__main__':
         pezzi = cit.split('."')
         if len(pezzi)>1:
             if len(pezzi[1])<35:
-                print("Vuoi postare: "+pezzi[0])
+                print("Vuoi postare: "+cit)
                 risposta= raw_input("y/n: ")
                 if risposta=='y':
                     stampa(cit)

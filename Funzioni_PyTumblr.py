@@ -222,21 +222,17 @@ def smart_reblog(query):
 
 def get_titoli_from_reddit(query):
     lista_titoli = []
-
     # Il broser ha smesso di funzionare come dovrebbe
     browser = webdriver.Firefox(
         executable_path='/home/alex/Documents/Coder/geckodriver')
     browser.refresh()
-    browser.get('https://www.reddit.com/r/' + query+"/top/?sort=top&t=week")
+    browser.get('https://www.reddit.com/r/' + query+"/top/")#?sort=top&t=year")
 
     """
     buttons = browser.find_element_by_css_selector("button.c-btn:nth-child(2)")
     buttons.click()"""
-
     sleep(2.5)
-
-    siteTable_ = browser.find_elements_by_id(
-        "siteTable")[0]  # .get_attribute("innerHTML")
+    siteTable_ = browser.find_elements_by_id("siteTable")[0]  # .get_attribute("innerHTML")
     html = browser.execute_script("return arguments[0].innerHTML;", siteTable_)
     #siteTable = browser.find_elements_by_class_name('sitetable linklisting')[0].get_attribute("innerHTML")
     try:
@@ -251,6 +247,55 @@ def get_titoli_from_reddit(query):
 
     browser.quit()
     return lista_titoli[1:]
+def get_titoli_from_new_reddit(query):
+    lista_titoli = []
+    # Il broser ha smesso di funzionare come dovrebbe
+    browser = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser.refresh()
+    browser.get('https://www.reddit.com/r/' + query+"/top/?sort=top&t=week")
+
+    lista_span = browser.find_elements_by_tag_name("span") # .get_attribute("innerHTML")
+    
+    html = browser.execute_script("return arguments[0].innerHTML;", lista_span)
+    #siteTable = browser.find_elements_by_class_name('sitetable linklisting')[0].get_attribute("innerHTML")
+    try:
+        soup = BeautifulSoup(html, "html.parser", from_encoding="utf-8")
+        urls = soup.find_all("a")#, attrs={"class": "title may-blank "})
+        for k in urls:
+            lista_titoli.append(k.getText())
+
+    except (TypeError):
+        print ("Probabilmente hanno cambiato l'html")
+
+    browser.quit()
+    return lista_titoli[1:]
+
+def get_quotes():
+    lista_titoli = []
+    # Il broser ha smesso di funzionare come dovrebbe
+    browser = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser.refresh()
+    browser.get('http://inspirationalshit.com/quotes')
+    
+    for _ in range(10):
+        
+        ps = browser.find_elements_by_class_name("text-uppercase")[26]
+        auth = browser.find_elements_by_class_name("text-uppercase")[27]
+        lista_titoli.append(ps.text+ " - " +auth.text)
+        arrow = browser.find_element_by_class_name("nextbutton")
+        arrow.click()
+    
+        sleep(0.5)
+    browser.quit()
+    return lista_titoli
+    
 
 def __main__():
+    lista_prova=get_quotes()
+    print(len(lista_prova))
+    for k in lista_prova:
+        print(k+"\n")
+        
+        
+        
     print("\nICSDI\n")

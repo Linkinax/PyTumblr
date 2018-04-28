@@ -17,6 +17,8 @@ from Poster.QuotesRedditBlog import Quotes
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from Poster.Funzioni_PyTumblr import *
+from Funzioni_PyTumblr import get_titoli_from_new_reddit, get_quotes
+
 
 
 #reload(sys)
@@ -25,15 +27,7 @@ from Poster.Funzioni_PyTumblr import *
 
 if __name__ == '__main__':
     print (" TEST --->Working in progress<---..")
-    f_memes_r = RedditBlog("gn1tWsZ5Wq3tyOdZbKoOLHrUhlYwAnXqDjEeLRtwjGuCu1LKh2",
-                "vcIKu8qrHl8uguTgjkbGuwaQiVDajMfY3zi1u7AJXcUzlDVxiU",
-                "dC00e6YQxlwWT37Lm8A8ZIx1VpwHoVcTbCAHlinpptluI6R8YT",
-                "6gMoqbosWaQCfK1c56CPvCNmMyyFtZkZjKrDuUDNig4Bd10Vsw",
-                "gn1tWsZ5Wq3tyOdZbKoOLHrUhlYwAnXqDjEeLRtwjGuCu1LKh2",
-                "memesforages",
-                "memes",
-                ['meme', 'memes', 'funny', 'dank meme', 'funny picture'])
-    f_memes_r.reblog_adv()
+    
     
     """
     aww_r = RedditBlog("fIJI5esiBwbsttsdd6QhPSB4GvNXMlwzkSAq43efSH8ri9cpQ9",
@@ -84,6 +78,9 @@ if __name__ == '__main__':
                      ['girl faces','nsfw', 'sexy',  'porn', 'sex', 'o face', 'hot', 'hot gifs','penetration', 'omg face', 'omg hot', 'hot face', 'orgasm'])
     insertion_blog_reddit.posta()
     """
-        
+    lista_prova=get_quotes()
+    print(len(lista_prova))
+    for k in lista_prova:
+        print(k+"\n")
     print("Finito tutto, gg wp!")
     pass
