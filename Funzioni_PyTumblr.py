@@ -227,7 +227,7 @@ def get_titoli_from_reddit(query):
     browser = webdriver.Firefox(
         executable_path='/home/alex/Documents/Coder/geckodriver')
     browser.refresh()
-    browser.get('https://www.reddit.com/r/' + query+"/top/")
+    browser.get('https://www.reddit.com/r/' + query+"/top/?sort=top&t=week")
 
     """
     buttons = browser.find_element_by_css_selector("button.c-btn:nth-child(2)")

@@ -68,14 +68,17 @@ if __name__ == '__main__':
     #PostaInstagram(cits[1] +" #quote")"
                     
     for cit in cits:                   
-        print("CIT: "+ cit+ "\n")
+        #print("CIT: "+ cit+ "\n")
         pezzi = cit.split('."')
         if len(pezzi)>1:
             if len(pezzi[1])<35:
-                print("Posto: "+pezzi[0])
-                stampa(cit)
-                PostaInstagram(pezzi[1]+ " #quote #amen #quoteoftheday #life #instaquotes #wisdom #true #like4like #follow4follow #sayings #motivational #motivationalquotes #dailyquotes #inspiration #famouswords #quotation #citation #words #said #cit "+"#"+str(author(pezzi[1])).replace(" ", ''), password)                 
-                sleep(50)        
+                print("Vuoi postare: "+pezzi[0])
+                risposta= raw_input("y/n: ")
+                if risposta=='y':
+                    stampa(cit)
+                    PostaInstagram(pezzi[0]+ " #quote #amen #quoteoftheday #life #instaquotes #wisdom #true #like4like #follow4follow #sayings #motivational #motivationalquotes #dailyquotes #inspiration #famouswords #quotation #citation #words #said #cit "+"#"+str(author(pezzi[1])).replace(" ", ''), password)                 
+                else:
+                    print("Ok non posto quella quote e.e\n")      
                     
                     
                     
