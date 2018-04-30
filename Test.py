@@ -17,7 +17,8 @@ from Poster.QuotesRedditBlog import Quotes
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from Poster.Funzioni_PyTumblr import *
-from Funzioni_PyTumblr import get_titoli_from_new_reddit, get_quotes
+from Funzioni_PyTumblr import get_titoli_from_new_reddit, get_quotes, like_ig,\
+    affiliate_marketing
 
 
 
@@ -78,9 +79,7 @@ if __name__ == '__main__':
                      ['girl faces','nsfw', 'sexy',  'porn', 'sex', 'o face', 'hot', 'hot gifs','penetration', 'omg face', 'omg hot', 'hot face', 'orgasm'])
     insertion_blog_reddit.posta()
     """
-    lista_prova=get_quotes()
-    print(len(lista_prova))
-    for k in lista_prova:
-        print(k+"\n")
+    #like_ig()
+    affiliate_marketing("https://crazycakeme.tumblr.com/tagged/14871f5")
     print("Finito tutto, gg wp!")
     pass

@@ -8,8 +8,11 @@ import random
 from bs4 import BeautifulSoup
 from time import sleep
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import ElementNotInteractableException
 
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+import selenium
 
 
 def get_stuff_from_tumblr(arg):
@@ -277,7 +280,7 @@ def get_quotes():
     browser.refresh()
     browser.get('http://inspirationalshit.com/quotes')
     
-    for _ in range(10):
+    for _ in range(25):
         
         ps = browser.find_elements_by_class_name("text-uppercase")[26]
         auth = browser.find_elements_by_class_name("text-uppercase")[27]
@@ -288,13 +291,152 @@ def get_quotes():
         sleep(0.5)
     browser.quit()
     return lista_titoli
-    
 
+def like_ig():
+    browser = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser.refresh()
+    #browser.get('https://www.instagram.com/explore/?hl=it')
+    browser.get('https://www.instagram.com/accounts/login/?hl=it')
+    
+    loggin = raw_input("Loggo?")
+    
+    id = browser.find_elements_by_name("username")
+    passw= browser.find_elements_by_name("password")
+    
+    id[0].send_keys("unsaid.citations")
+    password = raw_input("Zio passa la password: ")
+    passw[0].send_keys(str(password))
+    
+    button = browser.find_elements_by_tag_name("button")[0]
+    button.click()
+    
+    
+    sleep(5)
+    queries=["like4like","l4l","f4f","quote", "inspiration", "motivation", "cute", "quotes", "happy"]#"quote", "inspiration",
+    temp =0
+    while True:
+        for query in queries:
+        
+            browser.get('https://www.instagram.com/explore/tags/'+query+'/?hl=it')
+            sleep(5)
+            siteTable = browser.find_elements_by_tag_name("article")
+    
+            for elementi in siteTable[0].find_elements_by_class_name("_4rbun")[9:]:#_mck9w._gvoze._tn0ps"):
+                elementi.click()
+                sleep(3)
+                try:
+                    like = browser.find_elements_by_class_name("_8scx2.coreSpriteHeartOpen")[0]
+                    like.click()
+                    temp += 1
+                    
+                except(IndexError):
+                    print("Already liked zio =)\n")
+                    sleep(1)
+                try:
+                    click_fuori= browser.find_elements_by_class_name("_dcj9f")[0]
+                    click_fuori.click()
+                except(IndexError):
+                    print("Post Eliminato\n")
+                    break
+                    sleep(1)
+                
+                print("Likes: %d " %(temp))
+                
+                
+        
+        
+        
+    """  
+    divs = siteTable[0].find_elements_by_class_name("_mck9w._gvoze._tn0ps")[0]
+    divs.click()
+    sleep(2)
+    
+    like = browser.find_elements_by_class_name("_8scx2.coreSpriteHeartOpen")[0]
+    like.click()
+    
+    sleep(2)
+    
+    click_fuori= browser.find_elements_by_class_name("_dcj9f")[0]
+    click_fuori.click()
+    #imgs = siteTable[0].find_elements_by_css_selector("")
+    """
+    
+    #print(len(imgs))
+    
+    #for img in imgs:
+        #img.double_click()
+        #sleep(6)
+    
+    
+    
+def affiliate_marketing(url):
+    
+    logged=False
+    
+    browser = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser.refresh()
+    #browser.get('https://www.instagram.com/explore/?hl=it')
+    browser.get(url)
+    
+    
+    
+    for i in range(5):
+        button = browser.find_elements_by_class_name("reblog_button")[i]
+        button.click()
+        sleep(2)
+        if logged != True:
+            login_btn = browser.find_elements_by_id('signup_login_button')[0]
+            login_btn.click()
+            sleep(1)
+            
+            input_email = browser.find_element_by_id("signup_determine_email")
+            input_email.send_keys("memesforages@gmail.com")
+            sleep(0.5)
+            next_btn = browser.find_elements_by_id("signup_forms_submit")[0]
+            next_btn.click()
+            sleep(4)
+            try:
+                next_btn2 = browser.find_elements_by_class_name("forgot_password_link")[0]
+                next_btn2.click()
+            except(ElementNotInteractableException):
+                next_btn2 = browser.find_elements_by_class_name("forgot_password_link")[0]
+                next_btn2.click()
+            sleep(4)
+            
+           
+            input = raw_input("metti la pass")
+                #input_pass = browser.find_element_by_id("signup_password")
+                
+            
+            
+            btn_log= browser.find_element_by_id("signup_forms_submit")
+            btn_log.click()
+            logged = True
+        
+        
+        sleep(4)
+        tags_input = browser.find_elements_by_class_name("post-form--tag-editor")[0]
+        tags_input.send_keys("ads")
+        tags_input.send_keys(Keys.TAB)
+        sleep(2)
+        tags_input.send_keys("fashion, chic, clothes, tee, hooodie")
+        
+        
+        drop_down = browser.find_elements_by_class_name("dropdown-area.icon_arrow_carrot_down.pinned-target")[0]
+        drop_down.click()
+        
+        sleep(4)
+        queue_option  = browser.find_elements_by_class_name("item-option")[1]
+        queue_option.click()
+        
+        sleep(3)
+        queue_btn  = browser.find_element_by_class_name("button-area.create_post_button")
+        queue_btn.click()
+        sleep(2)
+        browser.get(url)
+        
 def __main__():
-    lista_prova=get_quotes()
-    print(len(lista_prova))
-    for k in lista_prova:
-        print(k+"\n")
+   
         
         
         
