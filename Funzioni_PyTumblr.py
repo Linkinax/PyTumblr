@@ -312,17 +312,19 @@ def like_ig():
     
     
     sleep(5)
-    queries=["like4like","l4l","f4f","quote", "inspiration", "motivation", "cute", "quotes", "happy"]#"quote", "inspiration",
+    queries=["like4like","l4l","f4f","photo","likeforlike", "inspiration", "motivation", "smile","follow4follow","cute", "quotes", "happy"]#"quote", "inspiration",
     temp =0
     while True:
         for query in queries:
         
             browser.get('https://www.instagram.com/explore/tags/'+query+'/?hl=it')
+            #browser.get('https://www.instagram.com/valentina.jitariu/?hl=it')
             sleep(5)
             siteTable = browser.find_elements_by_tag_name("article")
     
-            for elementi in siteTable[0].find_elements_by_class_name("_4rbun")[9:]:#_mck9w._gvoze._tn0ps"):
-                elementi.click()
+            for _ in range(1):#)"_e3il2")[9:]:#_mck9w._gvoze._tn0ps"):
+                elementi = siteTable[0].find_elements_by_class_name('_4rbun')[9:]
+                elementi[0].click()
                 sleep(3)
                 try:
                     like = browser.find_elements_by_class_name("_8scx2.coreSpriteHeartOpen")[0]
@@ -339,34 +341,59 @@ def like_ig():
                     print("Post Eliminato\n")
                     break
                     sleep(1)
+                #browser.get('https://www.instagram.com/explore/tags/'+query+'/?hl=it')
+                sleep(20)
                 
-                print("Likes: %d " %(temp))
+                print("Likes messi: %d " %(temp))
+
+def blondie():
+    browser = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser.refresh()
+    browser.get('https://www.instagram.com/accounts/login/?hl=it')
+    
+    loggin = raw_input("Loggo?")
+    
+    id = browser.find_elements_by_name("username")
+    passw= browser.find_elements_by_name("password")
+    
+    id[0].send_keys("unsaid.citations")
+    password = raw_input("Zio passa la password: ")
+    passw[0].send_keys(str(password))
+    
+    button = browser.find_elements_by_tag_name("button")[0]
+    button.click()
+    
+    
+    sleep(5)
+    temp =0
+    while True:
+        
+        browser.get('https://www.instagram.com/angelicavezzoli/?hl=it')
+        sleep(5)
+        siteTable = browser.find_elements_by_tag_name("article")
+        input=raw_input("parto?")
+        for elementi in siteTable[0].find_elements_by_class_name('_e3il2')[12:]:#)"_e3il2")[9:]:#_mck9w._gvoze._tn0ps"):
+            elementi.click()
+            sleep(3)
+            try:
+                like = browser.find_elements_by_class_name("_8scx2.coreSpriteHeartOpen")[0]
+                like.click()
+                temp += 1
+                    
+            except(IndexError):
+                print("Already liked zio =)\n")
+                sleep(1)
+            try:
+                click_fuori= browser.find_elements_by_class_name("_dcj9f")[0]
+                click_fuori.click()
+            except(IndexError):      
+                print("Post Eliminato\n")
+                break
+                sleep(1)
+                #browser.get('https://www.instagram.com/explore/tags/'+query+'/?hl=it')
+            sleep(3)
                 
-                
-        
-        
-        
-    """  
-    divs = siteTable[0].find_elements_by_class_name("_mck9w._gvoze._tn0ps")[0]
-    divs.click()
-    sleep(2)
-    
-    like = browser.find_elements_by_class_name("_8scx2.coreSpriteHeartOpen")[0]
-    like.click()
-    
-    sleep(2)
-    
-    click_fuori= browser.find_elements_by_class_name("_dcj9f")[0]
-    click_fuori.click()
-    #imgs = siteTable[0].find_elements_by_css_selector("")
-    """
-    
-    #print(len(imgs))
-    
-    #for img in imgs:
-        #img.double_click()
-        #sleep(6)
-    
+            print("Likes messi: %d " %(temp))
     
     
 def affiliate_marketing(url):
