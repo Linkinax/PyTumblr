@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from Poster.Funzioni_PyTumblr import *
 from Funzioni_PyTumblr import get_titoli_from_new_reddit, get_quotes, like_ig,\
-    affiliate_marketing, blondie
+    affiliate_marketing, blondie, follow_ig, insta_account
 
 
 
@@ -80,8 +80,8 @@ if __name__ == '__main__':
     insertion_blog_reddit.posta()
     """
     #like_ig()
-    affiliate_marketing("https://crazycakeme.tumblr.com/tagged/14871f7")
-    #like_ig()
-    
+    #affiliate_marketing("https://crazycakeme.tumblr.com/tagged/14871f7")
+    #follow_ig()
+    insta_account()
     print("Finito tutto, gg wp!")
     pass

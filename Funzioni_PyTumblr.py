@@ -395,6 +395,60 @@ def blondie():
                 
             print("Likes messi: %d " %(temp))
     
+def follow_ig():
+    browser = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser.refresh()
+    #browser.get('https://www.instagram.com/explore/?hl=it')
+    browser.get('https://www.instagram.com/accounts/login/?hl=it')
+    
+    loggin = raw_input("Loggo?")
+    
+    id = browser.find_elements_by_name("username")
+    passw= browser.find_elements_by_name("password")
+    
+    id[0].send_keys("unsaid.citations")
+    password = raw_input("Zio passa la password: ")
+    passw[0].send_keys(str(password))
+    
+    button = browser.find_elements_by_tag_name("button")[0]
+    button.click()
+    
+    
+    sleep(5)
+    queries=["like4like","l4l","f4f","photo","likeforlike", "inspiration", "motivation", "smile","follow4follow","cute", "quotes", "happy"]#"quote", "inspiration",
+    temp =0
+    while True:
+        for query in queries:
+        
+            browser.get('https://www.instagram.com/explore/tags/'+query+'/?hl=it')
+            #browser.get('https://www.instagram.com/valentina.jitariu/?hl=it')
+            sleep(5)
+            siteTable = browser.find_elements_by_tag_name("article")
+    
+            for _ in range(1):#)"_e3il2")[9:]:#_mck9w._gvoze._tn0ps"):
+                elementi = siteTable[0].find_elements_by_class_name('_4rbun')[9:]
+                elementi[0].click()
+                sleep(3)
+                try:
+                    follow = browser.find_elements_by_class_name("_qv64e._iokts._4tgw8._njrw0   ")[0]
+                    follow.click()
+                    temp += 1
+                    
+                except(IndexError):
+                    print("Already liked zio =)\n")
+                    sleep(1)
+                try:
+                    click_fuori= browser.find_elements_by_class_name("_dcj9f")[0]
+                    click_fuori.click()
+                except(IndexError):
+                    print("Post Eliminato\n")
+                    break
+                    sleep(1)
+                #browser.get('https://www.instagram.com/explore/tags/'+query+'/?hl=it')
+                sleep(20)
+                
+                print("Following new %d people" %(temp))
+
     
 def affiliate_marketing(url):
     
@@ -461,10 +515,45 @@ def affiliate_marketing(url):
         queue_btn.click()
         sleep(2)
         browser.get(url)
-        
+def insta_account():
+    firefox_profile = webdriver.FirefoxProfile()
+    firefox_profile.set_preference("browser.privatebrowsing.autostart", True)
+    
+    browser = webdriver.Firefox(firefox_profile=firefox_profile,executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser.refresh()
+    #browser.get('https://www.instagram.com/explore/?hl=it')
+    browser.get('https://www.instagram.com/accounts/login/?hl=it')
+    sleep(2)
+    p_tag = browser.find_element_by_class_name("_g9ean")
+    a_tag = p_tag.find_element_by_tag_name("a")
+    a_tag.click()
+    
+    email = get_temp_email()
+    inputs = browser.find_elements_by_class_name("_ph6vk._jdqpn._o716c")
+    inputs[0].send_keys(email)
+    inputs[1].send_keys("Johnny Bravo")
+    username = email.split("@")[0].join("linky")
+    inputs[2].send_keys(username)
+    file_txt = open("users.txt", "a")
+    file_txt.writelines(username)
+    file_txt.close()
+    inputs[3].send_keys("fuckthepoliS")
+    sleep(1)
+    inscr_button = browser.find_elements_by_class_name("_qv64e._gexxb._4tgw8._njrw0 ")
+    inscr_button[1].click()
+def get_temp_email():
+    browser_email = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser_email.refresh()
+    browser_email.get("https://robot-mail.com/msg")
+    sleep(2)
+    email = browser_email.find_element_by_class_name("address.what_to_copy")
+    email_text = email.text
+    browser_email.close()
+    return email_text
+    
 def __main__():
    
-        
+    
         
         
     print("\nICSDI\n")
