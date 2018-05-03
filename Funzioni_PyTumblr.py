@@ -14,6 +14,12 @@ from selenium.common.exceptions import ElementNotInteractableException
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import selenium
 
+import stem.process
+from stem import Signal
+from stem.control import Controller
+from splinter import Browser
+
+
 
 def get_stuff_from_tumblr(arg):
     """
@@ -516,31 +522,43 @@ def affiliate_marketing(url):
         sleep(2)
         browser.get(url)
 def insta_account():
-    firefox_profile = webdriver.FirefoxProfile()
-    firefox_profile.set_preference("browser.privatebrowsing.autostart", True)
     
-    browser = webdriver.Firefox(firefox_profile=firefox_profile,executable_path='/home/alex/Documents/Coder/geckodriver')
-    browser.refresh()
-    #browser.get('https://www.instagram.com/explore/?hl=it')
-    browser.get('https://www.instagram.com/accounts/login/?hl=it')
+    proxyIP = "127.0.0.1"
+    proxyPort = 9150
+ 
+    proxy_settings = {"network.proxy.type":1,
+                      "network.proxy.socks": proxyIP,
+                      "network.proxy.socks_port": proxyPort,
+                      "network.proxy.socks_remote_dns": True,
+                      }
+    
+    browser_sp = Browser('firefox', profile_preferences=proxy_settings,executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser_sp.visit("http://www.icanhazip.com")
+    switchIP()
     sleep(2)
-    p_tag = browser.find_element_by_class_name("_g9ean")
-    a_tag = p_tag.find_element_by_tag_name("a")
-    a_tag.click()
+    browser_sp.visit("http://www.instagram.com/accounts/login/?hl=it")
+    
+    sleep(2)
+    a_tags = browser_sp.find_by_tag("a")
+    for a in a_tags:
+        if a.text == "Iscriviti":
+            a.click()
     
     email = get_temp_email()
-    inputs = browser.find_elements_by_class_name("_ph6vk._jdqpn._o716c")
-    inputs[0].send_keys(email)
-    inputs[1].send_keys("Johnny Bravo")
-    username = email.split("@")[0].join("linky")
-    inputs[2].send_keys(username)
+    user = email.split("@")[0]+ "linky"
+    browser_sp.fill("emailOrPhone", email)
+    browser_sp.fill("fullName", "Pebblor El Munchy")
+    browser_sp.fill("username", user)
+    browser_sp.fill("password", "fuckthepoliS")
+    buttons = browser_sp.find_by_tag("button")
+    for button in buttons:
+        if button.text=="Iscriviti":
+            button.click()
     file_txt = open("users.txt", "a")
-    file_txt.writelines(username)
+    file_txt.writelines(user+"\n")
     file_txt.close()
-    inputs[3].send_keys("fuckthepoliS")
-    sleep(1)
-    inscr_button = browser.find_elements_by_class_name("_qv64e._gexxb._4tgw8._njrw0 ")
-    inscr_button[1].click()
+    browser_sp.close()
+    
 def get_temp_email():
     browser_email = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
     browser_email.refresh()
@@ -550,7 +568,11 @@ def get_temp_email():
     email_text = email.text
     browser_email.close()
     return email_text
-    
+
+def switchIP():
+    with Controller.from_port(port=9151) as controller:
+        controller.authenticate()
+        controller.signal(Signal.NEWNYM)
 def __main__():
    
     

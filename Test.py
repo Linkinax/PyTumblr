@@ -82,6 +82,7 @@ if __name__ == '__main__':
     #like_ig()
     #affiliate_marketing("https://crazycakeme.tumblr.com/tagged/14871f7")
     #follow_ig()
+    
     insta_account()
     print("Finito tutto, gg wp!")
     pass
