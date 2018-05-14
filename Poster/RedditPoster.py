@@ -9,7 +9,7 @@ import pytumblr
 from time import sleep
 from .Funzioni_PyTumblr import get_nsfw_urls_from_reddit
 from .Funzioni_PyTumblr import get_titoli_from_reddit
-from Funzioni_PyTumblr import smart_reblog_adv
+
 
 
 class RedditBlog():

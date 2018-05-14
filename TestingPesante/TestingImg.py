@@ -4,11 +4,11 @@ Created on Mar 12, 2018
 @author: alex
 '''
 import PIL
-
+import getpass
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw 
-from Funzioni_PyTumblr import get_titoli_from_reddit, get_quotes
+from Poster.Funzioni_PyTumblr import get_titoli_from_reddit, get_quotes
 from InstagramAPI import InstagramAPI
 import stampa_dio
 from time import sleep
@@ -62,25 +62,7 @@ def author(stringa):
             return stringa.replace("-", '')
    
 if __name__ == '__main__':
-    password = raw_input("Digita la password: ")
-    """OLD SHIEEEEEEEET
-    cits = get_titoli_from_reddit('quotes')
-    print ("Elementi: "+ str(cits.__len__()))
-    #PostaInstagram(cits[1] +" #quote")"
-                    
-    for cit in cits:                   
-        #print("CIT: "+ cit+ "\n")
-        pezzi = cit.split('."')
-        if len(pezzi)>1:
-            if len(pezzi[1])<35:
-                print("Vuoi postare: "+cit)
-                risposta= raw_input("y/n: ")
-                if risposta=='y':
-                    stampa(cit)
-                    PostaInstagram(pezzi[0]+ " #quote #amen #quoteoftheday #life #instaquotes #wisdom #true #like4like #follow4follow #sayings #motivational #motivationalquotes #dailyquotes #inspiration #famouswords #quotation #citation #words #said #cit "+"#"+str(author(pezzi[1])).replace(" ", ''), password)                 
-                else:
-                    print("Ok non posto quella quote e.e\n")      
-    """
+    password = getpass.getpass("Digita la password: ")
     
     cits = get_quotes()
     for cit in cits:                   

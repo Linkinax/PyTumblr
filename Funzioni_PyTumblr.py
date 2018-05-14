@@ -5,6 +5,7 @@ Created on 27 mar 2016
 '''
 import requests
 import random
+import getpass
 from bs4 import BeautifulSoup
 from time import sleep
 from selenium import webdriver
@@ -78,29 +79,33 @@ def get_urls_from_reddit(querry):
     browser = webdriver.Firefox(
         executable_path='/home/alex/Documents/Coder/geckodriver')
 
-    browser.get('https://www.reddit.com/r/' + querry+ "/top/")
+    browser.get('https://new.reddit.com/r/' + querry+ "/top/")
 
     #buttons = browser.find_element_by_css_selector("button.c-btn:nth-child(2)")
     # buttons.click()
 
     sleep(0.5)
 
-    siteTable_ = browser.find_elements_by_id(
-        "siteTable")[0]  # .get_attribute("innerHTML")
+    siteTable_ = browser.find_elements_by_class_name("s1wjvfsx-0.eQjckQ")[1]  # .get_attribute("innerHTML")
     html = browser.execute_script("return arguments[0].innerHTML;", siteTable_)
     #siteTable = browser.find_elements_by_class_name('sitetable linklisting')[0].get_attribute("innerHTML")
     try:
         soup = BeautifulSoup(html, "html.parser", from_encoding="utf-8")
         urls = soup.find_all(
-            "a", attrs={"class": "thumbnail may-blank outbound"})
+            "img", attrs={"class": "media-element evajbz-0 ctgYFX"})
+        titoli = soup.find_all(
+            "h2",attrs={ "class": "cdg6za-1 gLBuPH"})
+        for t in titoli:
+            lista_titoli.append(t.get_text())
 
         for k in urls:
-            lista_url.append(k.get("href"))
-            lista_titoli.append(k.getText())
+            lista_url.append(k.get("src"))
+            
 
     except (TypeError):
         print ("Probabilmente hanno cambiato l'html")
-
+    
+    
     browser.quit()
     for i in range(0, lista_url.__len__()):
         lista_finale.append(lista_url[i] + '\t' + lista_titoli[i])
@@ -118,7 +123,7 @@ def get_nsfw_urls_from_reddit(querry):
     browser = webdriver.Firefox(
         executable_path='/home/alex/Documents/Coder/geckodriver')
     browser.refresh()
-    browser.get('https://www.reddit.com/r/' + querry + '/new')
+    browser.get('https://new.reddit.com/r/' + querry + '/new')
 
     buttons = browser.find_element_by_css_selector("button.c-btn:nth-child(2)")
     buttons.click()
@@ -351,7 +356,39 @@ def like_ig():
                 sleep(20)
                 
                 print("Likes messi: %d " %(temp))
-
+def blondie_2():
+    temp = 0
+    browser = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser.refresh()
+    browser.get('https://web.whatsapp.com/')
+    input = raw_input("DID it ?")
+    
+    who = browser.find_element_by_class_name("jN-F5.copyable-text.selectable-text")
+    who.send_keys("Fabrizio maldarizzi")
+    
+    stronzo = browser.find_element_by_class_name("_2EXPL")
+    stronzo.click()
+    print(stronzo.text)
+    input = raw_input("Nome")
+    gente = browser.find_elements_by_class_name("_1wjpf")
+    
+    for k in gente:
+        if(k.text == input):
+            k.click()
+            sleep(1)
+            break
+    while temp<5000:
+            chat = browser.find_element_by_class_name("_2S1VP.copyable-text.selectable-text")
+            mex = "Spero che il tuo cell sia in carica e in silenzioso: %d" %(temp)
+            temp +=1
+            chat.send_keys(mex)
+            invia = browser.find_element_by_class_name("_2lkdt")
+            invia.click()
+            sleep(1)
+                
+    
+    
+    
 def blondie():
     browser = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
     browser.refresh()
@@ -413,7 +450,7 @@ def follow_ig():
     passw= browser.find_elements_by_name("password")
     
     id[0].send_keys("unsaid.citations")
-    password = raw_input("Zio passa la password: ")
+    password = getpass.getpass("Zio passa la password: ")
     passw[0].send_keys(str(password))
     
     button = browser.find_elements_by_tag_name("button")[0]
@@ -455,6 +492,38 @@ def follow_ig():
                 
                 print("Following new %d people" %(temp))
 
+def unfollow_ig():
+    browser = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser.refresh()
+    #browser.get('https://www.instagram.com/explore/?hl=it')
+    browser.get('https://www.instagram.com/accounts/login/?hl=it')
+    
+    loggin = raw_input("Loggo?")
+    
+    id = browser.find_elements_by_name("username")
+    passw= browser.find_elements_by_name("password")
+    
+    id[0].send_keys("unsaid.citations")
+    password = getpass.getpass("Zio passa la password: ")
+    passw[0].send_keys(str(password))
+    
+    button = browser.find_elements_by_tag_name("button")[0]
+    button.click()
+    sleep(2)
+    a=0
+    while True:
+        browser.get('https://www.instagram.com/unsaid.citations/?hl=it')
+        sleep(20)
+        profile = browser.find_elements_by_class_name("_fd86t")[2]
+        profile.click()
+        sleep(4)
+        buttons = browser.find_elements_by_class_name("_qv64e._t78yp._4tgw8._njrw0")
+        for i in range(9):
+            buttons[i].click()
+            sleep(4)
+            print("Unfollowed: %d\n"%(a))
+            a+=1
+        
     
 def affiliate_marketing(url):
     
@@ -521,6 +590,7 @@ def affiliate_marketing(url):
         queue_btn.click()
         sleep(2)
         browser.get(url)
+    browser.quit()
 def insta_account():
     
     proxyIP = "127.0.0.1"
