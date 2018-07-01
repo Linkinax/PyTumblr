@@ -36,7 +36,7 @@ if __name__ == '__main__':
                      ['o faces','nsfw', 'sexy',  'porn', 'sex', 'o face', 'hot', 'hot gifs','girls coming', 'omg face', 'omg hot', 'hot face', 'orgasm'])
     """
     
-    """
+    
     cars_blog = Poster("s5ThrrONDBVMSqeeRXZZKfnc0YcoSeccbmE1o3asg5HlV1zZPe",
                      "hO27aURuoEPPAcmWTpIK8C6msBEm7t4ImsI7DfqnANhR85FH0f",
                      "69tajnyEkLjNN18azr8f1qvCrMEG51lRDMZpLBmorcqPAI0Tfl",
@@ -56,7 +56,7 @@ if __name__ == '__main__':
                      "autos",
                      ['cars', 'cool cars', 'luxury cars', 'auto', 'wow cars']
                        )
-    """
+    
     earth_blog_r = RedditBlog("epNkKeTfXS0OcQoZO9naLSXdj58EqksbBH3N7BNCaSDJ0WPRH8",
                      "ZQnyDcZjUPhspLOYQDycy0EciO4EenwraiSErVvXx4FcTVIdIH",
                      "kRs4r5H8XJngbip3enFbp2MZyKcnBApuuISMZTqdn9xfwoRIhO",
@@ -99,10 +99,10 @@ if __name__ == '__main__':
     #blogs_reddit.append(o_blog_reddit)
     blogs_reddit.append(programmingHumour_r)
     blogs_reddit.append(aww_r)
-    
-    
+    blogs_reddit.append(cars_blog_r)
     blogs_reddit.append(earth_blog_r)
-
+    
+    blogs_tumblr.append(cars_blog)
 
 
     for k in blogs_tumblr:
@@ -113,4 +113,3 @@ if __name__ == '__main__':
 
 
     print ("Finito tutto, gg wp!")
-    pass

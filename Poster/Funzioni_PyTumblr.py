@@ -92,24 +92,30 @@ def get_urls_from_reddit(querry):
     a= []
     h2=[]
     
-    siteTable_ = browser.find_elements_by_class_name("s13u4whu-2.eSXzny.s3jdpi9-0.ijWSz")[0]  # .get_attribute("innerHTML")
+    siteTable_ = browser.find_elements_by_class_name("s1us1wxs-0.iENbwa.s12rq52u-0.jNBfJm")[0]  # .get_attribute("innerHTML")
     html = browser.execute_script("return arguments[0].innerHTML;", siteTable_)
         #siteTable = browser.find_elements_by_class_name('sitetable linklisting')[0].get_attribute("innerHTML")
     if querry == 'memes':
-        a.append("s3w1xya-3 cMwgUA")
-        h2.append("s3w1xya-1 fKUbZA")
-    elif querry == "funny":
-        a.append("s3w1xya-3 dbWGjM")
-        h2.append("s3w1xya-1 fKUbZA")
+        a.append("s14d20sq-0 bkPXvB")
+        h2.append("s134yi85-0 fIwQCP")
     elif querry == "deepfriedmemes":
-        a.append("s3w1xya-3 bbgWQA")
-        h2.append("s3w1xya-1 fKUbZA")
+        a.append("s14d20sq-0 cOXbrs")
+        h2.append("s134yi85-0 fIwQCP")
     elif querry == "dankmemes":
-        a.append("s3w1xya-3 lfbPBy")
-        h2.append("s3w1xya-1 beitov")
-    elif querry == "autos":
-        a.append("s3w1xya-3 hvGeLg")
-        h2.append("s3w1xya-1 beitov")
+        a.append("s14d20sq-0 crUVqf")   
+        h2.append("s134yi85-0 ipXoh")
+    elif querry == "aww":
+        a.append("s14d20sq-0 dkqwRe")# <--------------
+        h2.append("s134yi85-0 fIwQCP")
+    elif querry == "ProgrammerHumour":
+        a.append("u1yomz-3 joNwwj")
+        h2.append("u1yomz-1 dShkqA")
+    elif querry == "EarthPorn":
+        a.append("u1yomz-3 cVedtE")
+        h2.append("u1yomz-1 hDABOf")
+    elif querry=="funny":
+        a.append("s1eq4wyl-1 lkDnpd")
+        h2.append("s1eq4wyl-0 fxqtqE")
         
         
         
@@ -438,7 +444,7 @@ def blondie():
     temp =0
     while True:
         
-        browser.get('https://www.instagram.com/angelicavezzoli/?hl=it')
+        browser.get('https://www.instagram.com/NomeTarget/?hl=it')
         sleep(5)
         siteTable = browser.find_elements_by_tag_name("article")
         input=raw_input("parto?")
@@ -562,12 +568,13 @@ def affiliate_marketing(url):
     browser.get(url)
     
     
-    
+    input = raw_input("Privacy")
     for i in range(5):
         button = browser.find_elements_by_class_name("reblog_button")[i]
         button.click()
         sleep(2)
         if logged != True:
+            sleep(1)
             login_btn = browser.find_elements_by_id('signup_login_button')[0]
             login_btn.click()
             sleep(1)
@@ -582,8 +589,8 @@ def affiliate_marketing(url):
                 next_btn2 = browser.find_elements_by_class_name("forgot_password_link")[0]
                 next_btn2.click()
             except(ElementNotInteractableException):
-                next_btn2 = browser.find_elements_by_class_name("forgot_password_link")[0]
-                next_btn2.click()
+                sleep(2)
+                
             sleep(4)
             
            

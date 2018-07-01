@@ -18,7 +18,6 @@ class _poster():
         self.query = querry_tumblr
         self.client = pytumblr.TumblrRestClient(self.Customer_key, self.Secret_key, self.Token, self.Secre_token)
 
-        pass
     def posta(self):
         """ questa f() posta su tumblr gli elementi presi dal dizionario {"url" : [tags]}"""
         self.filtra()
@@ -43,10 +42,10 @@ class _poster():
                             del self.stuff[k]
                         except KeyError:
                             print ("Errore 0")
-                            pass
+                            
                 except KeyError:
                     print("Errore 1")
-                    pass
+                    
     def Troll(self):
         print ('DIO MERDA')
 
