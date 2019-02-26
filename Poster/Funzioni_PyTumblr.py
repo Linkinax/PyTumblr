@@ -92,12 +92,12 @@ def get_urls_from_reddit(querry):
     a= []
     h2=[]
     
-    siteTable_ = browser.find_elements_by_class_name("s1us1wxs-0.iENbwa.s12rq52u-0.jNBfJm")[0]  # .get_attribute("innerHTML")
+    siteTable_ = browser.find_elements_by_class_name("s1w05phc-0.cbgzif.s1q3b4m-0.jHSLcl")[0]  # .get_attribute("innerHTML")
     html = browser.execute_script("return arguments[0].innerHTML;", siteTable_)
         #siteTable = browser.find_elements_by_class_name('sitetable linklisting')[0].get_attribute("innerHTML")
     if querry == 'memes':
-        a.append("s14d20sq-0 bkPXvB")
-        h2.append("s134yi85-0 fIwQCP")
+        a.append("b5szba-0 iUAolq")
+        h2.append("fiq55l-0 kZxSuN")
     elif querry == "deepfriedmemes":
         a.append("s14d20sq-0 cOXbrs")
         h2.append("s134yi85-0 fIwQCP")
@@ -106,10 +106,10 @@ def get_urls_from_reddit(querry):
         h2.append("s134yi85-0 ipXoh")
     elif querry == "aww":
         a.append("s14d20sq-0 dkqwRe")# <--------------
-        h2.append("s134yi85-0 fIwQCP")
-    elif querry == "ProgrammerHumour":
-        a.append("u1yomz-3 joNwwj")
-        h2.append("u1yomz-1 dShkqA")
+        h2.append("fiq55l-0 gnEGFa")
+    elif querry == "ProgrammerHumor":
+        a.append("s14d20sq-0 eUilkR")
+        h2.append("fiq55l-0 gnEGFa")
     elif querry == "EarthPorn":
         a.append("u1yomz-3 cVedtE")
         h2.append("u1yomz-1 hDABOf")
@@ -572,7 +572,7 @@ def affiliate_marketing(url):
     for i in range(5):
         button = browser.find_elements_by_class_name("reblog_button")[i]
         button.click()
-        sleep(2)
+        sleep(10)
         if logged != True:
             sleep(1)
             login_btn = browser.find_elements_by_id('signup_login_button')[0]
@@ -677,6 +677,27 @@ def switchIP():
     with Controller.from_port(port=9151) as controller:
         controller.authenticate()
         controller.signal(Signal.NEWNYM)
+def pageAM(url , end):
+    browser = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser.refresh()
+    #browser.get('https://www.instagram.com/explore/?hl=it')
+    browser.get(url)
+    
+    sleep(1)
+    ok = browser.find_elements_by_class_name("btn.yes")[0]
+    ok.click()
+    sleep(1)
+    
+    for k in range(1, end):
+        sleep(0.25)
+        for i in range(5):
+            button = browser.find_elements_by_class_name("reblog_button")[i]
+            print('"'+button.get_attribute("href")+'",')
+        browser.get( url[0:len(url)-1] + str(k+1))
+        sleep(0.25)
+    browser.quit()
+    
+    
 def __main__():
    
     
