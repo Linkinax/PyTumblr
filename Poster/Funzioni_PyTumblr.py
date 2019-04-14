@@ -678,7 +678,7 @@ def switchIP():
         controller.authenticate()
         controller.signal(Signal.NEWNYM)
 def pageAM(url , end):
-    browser = webdriver.Firefox(executable_path='/home/alex/Documents/Coder/geckodriver')
+    browser = webdriver.Firefox(executable_path="C:\\Users\\Linky\\Documents\\PyTumblr\\geckodriver.exe")
     browser.refresh()
     #browser.get('https://www.instagram.com/explore/?hl=it')
     browser.get(url)

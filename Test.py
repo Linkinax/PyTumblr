@@ -10,13 +10,9 @@ from Poster import *
 from Poster import RedditPoster
 from time import sleep
 import sys
-from Poster.RedditPoster import RedditBlog
-from Poster.RedditPoster import RedditBlog_nsfw
-from Poster.Poster import Poster
-from Poster.QuotesRedditBlog import Quotes
-from bs4 import BeautifulSoup
+
 from selenium import webdriver
-from Poster.Funzioni_PyTumblr import *
+from Poster.Funzioni_PyTumblr import pageAM
 
 
 
